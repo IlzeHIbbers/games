@@ -1,0 +1,173 @@
+body {
+  background-color: #282c34;
+  box-sizing: content-box;
+}
+
+.header {
+  display: flex;
+  place-content: space-between;
+  margin: 0 10vw;
+}
+
+.board {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.board-img{
+  position: absolute;
+  width: 88vw;
+  height: 80vh;
+  max-width: 91vh;
+  max-height: 81vw;
+  z-index: 2;
+}
+
+.board-grid {
+  display: flex;
+  width: 86vw;
+  height: 78vh;
+  max-width: 88vh;
+  max-height: 80vw;
+  margin-left: 1vw;
+} 
+
+.col {
+  display: flex;
+  flex-flow: column;
+  width: 13vw;
+}
+
+.cell{
+  flex-grow: 1;
+}
+
+.drop{
+  display: flex;
+  width: 86vw;
+  max-width: 88vh;
+  margin-left: 1vw;
+}
+
+.drop-cell{
+  height: 12vh;
+  max-height: 12vw;
+  flex-grow: 1;
+  border-radius: 12vh;
+}
+
+.empty-red:hover{
+  background: radial-gradient(circle, rgba(255,105,105,1) 0%, rgba(253,29,29,1) 50%, rgba(255,0,0,1) 100%);
+}
+
+.empty-yellow:hover{
+  background: radial-gradient(circle, rgba(251,250,129,1) 0%, rgba(255,253,95,1) 50%, rgba(255,252,0,1) 100%);
+}
+
+.token {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 12vh
+}
+
+.disable {
+  pointer-events: none; 
+  background-color: #282c34 !important; 
+}
+
+.red {
+  background: radial-gradient(circle, rgba(255,105,105,1) 0%, rgba(253,29,29,1) 50%, rgba(255,0,0,1) 100%);
+}
+
+.yellow {
+  background: radial-gradient(circle, rgba(251,250,129,1) 0%, rgba(255,253,95,1) 50%, rgba(255,252,0,1) 100%);
+}
+
+.green{
+  color: greenyellow;
+}
+
+.blur {
+  background-color: #ffffff08;
+}
+
+.drop-animation_6 {
+  animation: MoveDown_6 1.2s;
+}
+
+.drop-animation_5 {
+  animation: MoveDown_5 1s;
+}
+
+.drop-animation_4 {
+  animation: MoveDown_4 0.8s;
+}
+
+.drop-animation_3 {
+  animation: MoveDown_3 0.6s;
+}
+
+.drop-animation_2 {
+  animation: MoveDown_2 0.4s;
+}
+
+.drop-animation_1 {
+  animation: MoveDown_1 0.2s;
+}
+
+@keyframes MoveDown_6 {
+  from {
+    top: 0;
+  }
+  to {
+    top: min(80vh, 80vw);
+  }
+} 
+
+@keyframes MoveDown_5 {
+  from {
+    top: 0;
+  }
+  to {
+    top: min(66vh, 66vw);
+  }
+} 
+
+@keyframes MoveDown_4 {
+  from {
+    top: 0;
+  }
+  to {
+    top: min(54vh, 54vw);
+  }
+} 
+
+@keyframes MoveDown_3 {
+  from {
+    top: 0;
+  }
+  to {
+    top: min(40vh, 40vw);
+  }
+} 
+
+@keyframes MoveDown_2 {
+  from {
+    top: 0;
+  }
+  to {
+    top: min(26vh, 26vw);
+  }
+} 
+
+@keyframes MoveDown_1 {
+  from {
+    top: 0;
+  }
+  to {
+    top: min(12vh, 12vw);
+  }
+} 
